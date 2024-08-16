@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'edu.mylearning.calculator.svc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Rest dependencies
+    implementation "jakarta.ws.rs:jakarta.ws.rs-api:${jakartaWsRsVersion}"
+    implementation "org.glassfish.jersey.containers:jersey-container-grizzly2-http:${glassfishJerseyVersion}"
+    implementation "org.glassfish.jersey.inject:jersey-hk2:${glassfishJerseyVersion}"
+    implementation "org.glassfish.jersey.media:jersey-media-json-jackson:${glassfishJerseyVersion}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:${jacksonJsonVersion}"
+    // Logging
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

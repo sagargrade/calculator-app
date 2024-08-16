@@ -1,2 +1,10 @@
 # IDE related files and folders
 .idea
+*.iml
+
+# Build tool related files and folders
+**/.gradle
+**/gradle
+**/gradlew
+**/gradlew.bat
+**/build
